@@ -1,6 +1,6 @@
 package Start;
 public class A01 {
-	
+
 	public static void main(String[] args) {
 		int age;
 		age = 10;
