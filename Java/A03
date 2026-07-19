@@ -1,0 +1,33 @@
+package Start;
+public class A03 {
+	
+	public static void main(String[] args) {
+		int a = 1000;
+		short b = 10;
+//큰 타입을 작은 타입에 넣기엔 공간이 안 되니깐 형변환 시켜주어야 함.
+		short b2 = (short)a;
+		int a2 = b;
+		System.out.println("4바이트 int : " + a);
+		System.out.println("2바이트 short ; " + b);
+		System.out.println("큰 값에서 작은 타입으로 강제 : " + b2);
+		System.out.println("작은 값을 큰값으로 자동 : " + a2);
+		
+//자바에서 실수는 double로 기본적으로 인식해서 f를 사용해주어야함.		
+		float c = 1.1512f;
+		int d = 11512;
+		float c2 = d;
+		int d2 = (int)c;
+//바이트는 같지만 float이 더 큰 값이기 때문에 강제 형변환 해줌.
+//또는 float에서 int로 하면 값손실이 일어나니깐 일어나도 돼 라고 ok하는 의미로도 사용함.
+		System.out.println("4바이트 float ; " + c);
+		System.out.println("4바이트 int : " + d);
+		System.out.println("작은 값을 큰값으로 자동 : " + c2);
+		System.out.println("큰 값에서 작은 타입으로 강제 : " + d2);
+		
+		int i = 16777217;
+		float f = 1.0f;
+		float f2 = i;
+//대부분 자동형변환은 값손실이 없지만 이 경우에는 값손실이 생김 같은 바이트지만 float이 범위는 더 크기때문.
+		System.out.println("작은 값에서 큰값으로 자동 : " + f2);
+	}
+}
