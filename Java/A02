@@ -11,6 +11,3 @@ public class A02 {
 		System.out.println("input = " + input);
 	}
 }
-결과 : 입력해주세요 : 
-       입력용
-       input = 입력용
