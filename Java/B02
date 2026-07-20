@@ -1,0 +1,14 @@
+package Start;
+
+public class B02 {
+
+	public static void main(String[] args) {
+		byte a = 10;
+		byte b = 20;
+//a + b이기 때문에 byte가 아니라 int로 산술 변환 되었음 그래서 byte로 강제 형변환
+//		byte c = (byte)a	 + b; //이렇게 하면 a만 byte로 바꾸고 b는 int라 오류남
+		byte c = (byte)(a+b);
+		System.out.println(c);
+	}
+
+}
