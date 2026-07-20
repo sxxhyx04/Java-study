@@ -1,0 +1,21 @@
+package Start;
+
+public class B01 {
+	public static void main(String[] args) {
+		int a = 2;
+		int b = 4;
+		int c = a + b;
+		int c2 = a * b;
+		int c3 = a / b; //2 나누기 5 몫은 0이니깐	
+		System.out.println(c);
+		System.out.println(c2);
+		System.out.println(c3);
+//삼항연산자 
+		int d = 10;
+        int e = 20;
+        int f = (d > e) ? d : e;
+        System.out.println("큰 수 : " + f);
+        int f1 = (d < e) ? d : e;
+        System.out.println("작은 수 : " + f1);
+	}
+}
