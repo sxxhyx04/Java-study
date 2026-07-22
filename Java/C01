@@ -1,0 +1,32 @@
+package Start;
+
+public class C01 {
+	public static void main(String[] args) {
+		int score;
+		score = 91;
+		char grade;
+//		if(score > 90) {
+//			grade = 'A';
+//		}else if (80 <= score && score <= 90) {
+//			grade = 'B';
+//위 두 코드를 비교하면 80~90까지는 가능한 코드임
+//코드를 조금 간결하게 정리해보겠음
+		if(score >= 90){
+			grade = 'A';
+		}else if(score >= 80) {
+			grade = 'B';
+		}
+//이렇게 하였을 때 90이상만 80이상만 보기에 위에 코드와 같게 됨.
+//		if(score > 90) {
+//			grade = 'A';
+//		}else if (80 <= score && score <= 90) {
+//			grade = 'B';
+//		}
+		else if(score >= 70) {
+			grade = 'C';
+		}else {
+			grade = 'F';
+		}
+		System.out.println("학점은 : " + grade);
+		}
+	}
