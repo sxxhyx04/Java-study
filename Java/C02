@@ -1,0 +1,37 @@
+package Start;
+
+public class C02 {
+
+	public static void main(String[] args) {
+		int month;
+		month = 3;
+		String mon;
+//		if (month == 3 || month == 4 || month == 5) {
+//			mon = "봄";
+//		}else if (month == 6 || month == 7 || month == 8) {
+//			mon = "여름";
+//		}else if (month == 9 || month == 10 || month == 11) {
+//			mon = "가을";
+//		}else {
+//			mon = "겨울";
+//		}
+//		System.out.println("이번 계절은 : " + mon);
+//if문으로 쓰면 하나하나 다 만들어야하는 불편함이 있음.
+//이를 편리하게 만들고자 switch를 사용함
+		switch (month) {
+		case 3: case 4: case 5:
+			mon = "봄";
+			break;
+		case 6: case 7: case 8:
+			mon = "여름";
+			break;
+		case 9: case 10: case 11:
+			mon = "가을";
+			break;
+		default:
+			mon = "겨울";
+			break;
+		}
+		System.out.println("이번 계절은 : " + mon + " 입니다.");
+	}
+}
