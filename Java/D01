@@ -1,0 +1,22 @@
+package Start;
+
+import java.util.Arrays;
+public class D01 {
+	public static void main(String[] args) {
+		int score[] = { 1,2,3,4,5 };
+		int array[] = new int[score.length*2];
+		
+//		이 코드는 배열을 내가 신경 써서 사용해주는 것과 같음
+//		for(int i = 0; i<5; i++) {
+//			System.out.println("score : " + score[i]);
+		
+//		자동으로 배열의 크기를 읽어주며, score의 값을 array에 넣어줌
+//		for(int i = 0; i<score.length; i++) {
+//			array[i] = score[i];
+//		}
+//      score의 0번째를 array의 5번째 위치에 score길이만큼 복사해줌
+		System.arraycopy(score,0,array,5,score.length);
+		System.out.println("score : " + Arrays.toString(score));
+		System.out.println("array : " + Arrays.toString(array));
+	}
+}
