@@ -1,0 +1,25 @@
+package Start;
+
+public class D04 {
+	public static void main(String[] args) {
+		int[] numArr = new int[10]; //numArr배열10 생성
+//배열의 크기보다 작을 때 까지 증가하면서 순서대로 출력함 0~9
+		for(int i = 0; i < numArr.length; i++) {
+			numArr[i] = i;
+			System.out.println(numArr[i]);
+		}
+		System.out.println();
+//i가 100번 생성한 값을 출력할거임 랜덤 숫자로 0~9까지
+//numArr 변수를 tmp에 임시저장하고 랜덤으로 선택된 n번째 값을 0번째로 이동함
+//임시저장 한 코드를 n에 저장한다.
+		for(int i = 0; i < 100; i++) {
+			int n = (int)(Math.random() * 10);
+			int tmp = numArr[0];
+			numArr[0] = numArr[n];
+			numArr[n] = tmp;
+		}
+		for(int i = 0; i < numArr.length; i++)
+			System.out.println(numArr[i]);
+	}
+
+}
