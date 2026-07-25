@@ -1,0 +1,21 @@
+package Start;
+
+public class D07 {
+	public static void main(String[] args) {
+		String str = "ABCDE"; //문자열 String으로 나타냄
+		
+		String tmp = str.substring(1,4);//substring 범위 1~3인덱스
+		char ch = str.charAt(0); //0번째 인덱스 뽑아 문자로
+		
+		System.out.println(tmp);
+		System.out.println(ch);
+		
+		char[] chArr = { 'A','B','C'}; //배열 생성
+		char[] tmp1 = str.toCharArray();
+//문자열을 문자배열로 반환하는데 str이니깐 앞에 있는 "ABCDE"를 문자로 반환함.
+		String str1 = new String(chArr);//문자를 문자열로
+		
+		System.out.println(tmp1);
+		System.out.println(str1);
+	}
+}
