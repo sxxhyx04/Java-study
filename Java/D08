@@ -1,0 +1,13 @@
+package Start;
+
+public class D08 {
+	public static void main(String[] args) {
+//입력 받아내기 : Run → Run Configurations
+//클래스 선택하고 Arguments 프로그램 Arguments 에서 입력하기 
+//띄어쓰기와 ""로 문자열을 구별함.
+		System.out.println("매개변수의 개수 : " + args.length);
+			for(int i = 0; i < args.length; i++) {
+				System.out.println("args[" + i + "] = \""+args[i] + "\"");
+		}
+	}
+}
