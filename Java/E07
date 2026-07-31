@@ -1,0 +1,34 @@
+package Start;
+
+public class E07 {
+	public static void main(String[] args) {
+		Car1 c = new Car1();
+		System.out.println(c);
+	}
+}
+class Car1{
+    String color;
+    String gearType;
+    int door;
+    
+    Car1() {
+//car1의 기본생성자를 생성함. 근데 또 생성자를 만들면 누굴 호출 한지 모르니깐
+//코드의 중복을 방지하고자 this를 사용함.
+        this("white", "auto", 4);
+    }
+//같은 클래스의 다른 생성자를 호출함.
+    Car1(String color) {
+//this로 구분해줌
+        this(color, "auto", 4);
+    }
+//여기에 this가 호출 되는것.
+    Car1(String color, String gearType, int door) {
+        this.color = color;
+        this.gearType = gearType;
+        this.door = door;
+    }
+        @Override
+        public String toString() {
+        return "색상 : " + color + ", 기어 : " + gearType + ", 문 개수 : " + door;
+        }
+}
