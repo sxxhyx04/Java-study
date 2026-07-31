@@ -1,0 +1,13 @@
+package Start;
+
+public class E04 {
+	public static void main(String[] args) {
+		count(3);
+		}
+	static void count(int n) {
+		if(n!=0) {
+			System.out.println(n);
+			count(n-1);
+			}
+		}
+}
