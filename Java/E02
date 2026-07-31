@@ -1,0 +1,22 @@
+package Start;
+
+public class E02 {
+	public static void main(String[] args) {
+		Data d = new Data();
+		d.x = 10;
+		System.out.println("main() : " + d.x);
+		
+		change(d.x); //메서드 호출
+//change 메서드 갔다가 온 후라 콜 스택 구조에서 보면 main은 여전히 10
+		System.out.println("After change(d.x)");
+		System.out.println("main() : " +d.x);
+	}
+//콜 스택에서 구조로 보면 여기는 println하고 다시 사라짐
+		static void change(int x) { //change 메서드 (기본형 매개변수) 즉 읽기만 가능하다.
+			x = 1000;
+			System.out.println("change() : x " + x); 
+		}
+	}
+class Data{
+	int x; 
+}
