@@ -1,0 +1,37 @@
+package Start;
+
+public class E01 {
+	public static void main(String[] args) {
+		System.out.println("길이 : " + card.width);
+		System.out.println("높이 : " + card.heigth);
+		
+		card c1 = new card();
+		c1.Kind = "Hate";
+		c1.number = 6;
+		
+		card c2 = new card();
+		c2.Kind = "Ha";
+		c2.number = 61;
+		
+		System.out.println("c1 : " + c1.Kind + "," + c1.number);
+		System.out.println("c2 : " + c2.Kind + "," + c2.number);
+		
+//이 방법은 별로 좋은 방법은 아님. 현재 width랑 heigth는 cv인데 iv변경하는 것 처럼 보일 수 있기 때문
+		c1.width = 50;
+		c1.heigth = 80;
+		
+//전부 공유 변수 였기 때문에 어떤 방법으로 하던 공유하게 되어 똑같음.
+//즉 참조형 변수를 만들어서 값을 바꾸었더라고 c1은 card 클래스를 보기에 공유 변수로 인식함
+		System.out.println("길이 : " + card.width);
+		System.out.println("높이 : " + card.heigth);
+		System.out.println("길이 : " + c1.width);
+		System.out.println("길이 : " + c2.heigth);
+	}
+}
+class card{
+	String Kind;
+	int number;
+	
+	static int width  = 100;
+	static int heigth = 250;
+}
