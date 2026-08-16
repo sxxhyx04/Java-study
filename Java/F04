@@ -1,0 +1,27 @@
+package Start;
+import static java.lang.System.out;
+
+class Myparent {
+	public static void main(String[] args) {
+		F04 F = new F04();
+//		System.out.println(F.prv); //같은 클래스가 아니기에 에러
+		System.out.println(F.def);
+		System.out.println(F.prt);
+		System.out.println(F.pub);
+	}
+}
+
+
+public class F04{
+	private int prv; //같은 클래스에서
+			int def; //같은 패키지 
+	protected int prt; //같은 패키지 + 같은 클래스 + 자손(다른 패키지)
+	public int pub; // 접근 제한 없음.
+	
+	public void printmember() {
+		System.out.println(prv);
+		System.out.println(def);
+		System.out.println(prt);
+		System.out.println(pub);
+	}
+}
