@@ -1,0 +1,33 @@
+package Start;
+
+public class F06 {
+	public static void main(String[] args) {
+		FireEngine f = new FireEngine();
+		//조상인 Cha타입의 경우 형변환 생략 가능
+		Cha c = f; 
+		//자손인 FireEngine경우 생략 불가능.
+		FireEngine f2 = (FireEngine)c; 
+		
+		c.drive();
+	    c.stop();
+	    f2.water();
+	}
+}
+
+class Cha {
+//메서드 구현
+	void drive() {
+		System.out.println("drvie , brrr~~");
+	}
+	void stop() {
+		System.out.println("멈춥니다.");
+	}
+}
+
+//상속 Cha를 FireEngine에 상속해줌.
+class FireEngine extends Cha{
+//FireEngine은 water만 보이지만 안에 Cha의 메서드들도 존재함.
+	void water() {
+		System.out.println("water!!");
+	}
+}
