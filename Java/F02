@@ -1,0 +1,40 @@
+package Start;
+
+public class F02 {
+	public static void main(String[] args) {
+		//오버라이딩 하기 전 Point의 메서드 getLocation임
+		//내용은 아래 31번째 코드
+		Point p = new Point();
+		p.x = 3;
+		p.y = 5;
+		System.out.println(p.getLocation());
+		
+		//오버라이딩으로 내용 변경 후 Point의 상속받은 MyPoint호출
+		//내용은 아래 38번째 코드
+		MyPoint p1 = new MyPoint();
+		p1.x = 3;
+		p1.y = 5;
+		p1.z = 7;
+		System.out.println(p1.getLocation());
+		//오버라이딩을 쓰는이유 원래 return을 안 해줬더라면
+		//이렇게 복잡 했을 코드를 getLoaction이라는 메서드로 바로 구현 
+		//System.out.println("p.x = " + p.x);
+		//System.out.println("p1.x = " + p1.x);
+	}
+}
+
+class Point{
+	int x;
+	int y;
+	
+	String getLocation() {
+		return "x : " + x +", y: "+ y;
+	}
+}
+
+class MyPoint extends Point{
+	int z;
+	String getLocation() { //이 선언부는 Point와 일치해야함
+		return "x : " + x +", y: "+ y+", z:"+ z; //구현부는 변경 가능.
+	}
+}
