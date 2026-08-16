@@ -1,0 +1,40 @@
+package Start;
+
+public class F07 {
+
+	public static void main(String[] args) {
+		Unit[] group = {new Marine(), new Tank() } ;
+//		group[0] = new Marine(); 위 내용과 같은 내용
+//		group[1] = new Tank();
+		
+//		group[0].move(100,200); Marine의 move를 호출
+		for(int i = 0; i<group.length; i++)
+			group[i].move(100, 200);
+	}
+}
+
+//추상클래스 Unit을 만듦.
+abstract class Unit{
+	int x,y;
+//추상클래스니깐 추상메서드 선언.
+	abstract void move(int x, int y);
+	void stop() {}
+}
+
+//추상클래스의 Unit을 Marine에 상속함.
+class Marine extends Unit{
+//추상메서드 선언한 부분을 자식 Marine클래스에서 구현함.
+	void move(int x, int y) {
+		System.out.println("Marine[x =" + x + ",y= " + y + "]");
+	}
+	void stimPack() {}
+}
+
+//추상클래스의 Unit을 Tank에서도 상속함.
+class Tank extends Unit{
+//추상메서드 선언부를 Tank에도 할 수 있음.
+	void move(int x, int y) {
+		System.out.println("Tank[x = " + x + ",y = " + y + "]");
+	}
+	void changeMode() {}
+}
