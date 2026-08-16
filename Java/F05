@@ -1,0 +1,31 @@
+package Start;
+public class F05 {
+
+	public static void main(String[] args) {
+		Time t = new Time(); //객체 생성
+//setHour호출하여 int 정수값을 넣어줌.
+		t.setHour(2);
+//출력은 getHour의 호출로 시간을 반환해줌.
+		System.out.println(t.getHour());
+	}
+}
+
+class Time{
+//같은 클래스의 시 분 초 변수를 만든다.
+	private int hour; 
+	private int minute;
+	private int second;
+	
+//모든 범위에서 setHour 라는 메서드를 구현한 것.
+	
+	public void setHour(int hour) {
+//만약 시간이 0보다 작고 23보다 크면 반환할 것이다.
+		if(hour < 0 || hour > 23) return;
+		this.hour = hour;
+	}
+//모든 범위에서의 getHour()메서드를 구현
+	  public int getHour() {
+//반환하다 시간을
+	        return hour;
+	}
+}
