@@ -1,0 +1,52 @@
+package Start;
+
+public class F01 {
+
+	public static void main(String[] args) {
+		Tv t = new Tv(); //Tv 클래스의 객체를 만들고
+		DvD d = new DvD(); //DvD 클래스의 객체 
+		TvDvD tvd = new TvDvD(); //TvDvD 클래스의 객체
+		
+		//Tv클래스에 channel 사용
+		System.out.println(t.channel = 5);
+		//DvD 클래스의 power 사용
+		System.out.println(d.power);
+		//TvDvD 클래스의 chnnel 사용 즉 Tv 상속 시킨 것
+		System.out.println(tvd.channel = 5);
+		//TvDvD의 포함 DvD클래스의 power 사용
+		System.out.println(tvd.dv.power);
+	}
+}
+//Tv클래스
+class Tv{
+	boolean power;
+	int channel;
+	
+	void power() { power = ! power; }
+	void channelUp() { ++channel; }
+	void channelDown() { --channel; }
+}
+//DvD 클래스
+class DvD{
+	boolean power;
+	
+	void power() { power = ! power; }
+	void play() {}
+	void stop() {}
+}
+
+//두 클래스가 있다 하면 비중이 높은 것은 Tv니깐 Tv를 상속으로 DvD를 포함으로
+//Tv를 TvDvD에 상속 시키고 TvDvD에 DvD를 포함 시킨 것.
+class TvDvD extends Tv{
+	DvD dv = new DvD();
+	
+	void power() {
+		dv.power();
+	}
+	void play() {
+		dv.play();
+	}
+	void stop() {
+		dv.stop();
+	}
+}
